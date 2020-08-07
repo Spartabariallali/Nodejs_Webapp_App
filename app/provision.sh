@@ -41,7 +41,8 @@ sudo su
 npm install
 # node app.js
 
+scp -i ~/.ssh/DevOpsStudents.pem -r ~/Desktop/nginx_sample_code/nodejs-aws-deploy/app ubuntu@ec2-54.154.91.3.eu-west-1.compute.amazonaws.com:/home/ubuntu/
 
 # scp -i ~/.ssh/DevOpsStudents.pem -r ~/Downloads/NodeJS-AWS-Deploy/starter-code/app/ ubuntu@ec2-34-244-172-227.eu-west-1.compute.amazonaws.com:/home/ubuntu/
 
-scp -i ~/.ssh/DevOpsStudents.pem -r ~/Desktop/nginx_sample_code/nodejs-aws-deploy/app ubuntu@ec2-34-248-99-137.eu-west-1.compute.amazonaws.com:/home/ubuntu/
+# scp -i ~/.ssh/DevOpsStudents.pem -r ~/Desktop/nginx_sample_code/nodejs-aws-deploy/app

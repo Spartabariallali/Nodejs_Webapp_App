@@ -41,9 +41,9 @@ sudo apt-get update
 ```node app.js```
 
 ## Links to check
-**http://3.250.104.226:3000/**
+**http://http://54.154.91.3:3000//**
 
-**http://3.250.104.226:3000/fibonacci**
+**http://http://54.154.91.3:3000//fibonacci**
 
 
 ## Setting up the amazon web server
