@@ -1,17 +1,13 @@
 #!/bin/bash
 
 # setting up
+scp -i ~/.ssh/DevOpsStudents.pem -r ~/Desktop/nginx_sample_code/nodejs-aws-deploy/app ubuntu@ec2-52.211.100.82.eu-west-1.compute.amazonaws.com:/home/ubuntu/
 
-  sudo apt-get update
 
-# install required modules
-  sudo apt-get install nginx -y
-  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-  sudo apt-get install -y nodejs
-  sudo apt-get install npm -y
+ssh -i ~/.ssh/DevOpsStudents.pem ubuntu@ec2-52.211.100.82.eu-west-1.compute.amazonaws.com -i $ mkdir environment
 
-# Installs the npm dependencies
-  sudo apt-get update
-  cd /home/ubuntu/app
-  sudo npm install
-  sudo npm install pm2 -g
+
+scp -i ~/.ssh/DevOpsStudents.pem -r ~/Desktop/nginx_sample_code/nodejs-aws-deploy/app ubuntu@ec2-52.211.100.82.eu-west-1.compute.amazonaws.com:/home/ubuntu/environment
+
+
+ssh -i ~/.ssh/DevOpsStudents.pem ubuntu@ec2-52.211.100.82.eu-west-1.compute.amazonaws.com -i $ ./environment/app/provisions.sh
