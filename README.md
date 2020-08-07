@@ -2,10 +2,10 @@
 
 ## Manual run steps
 1. Copy app folder into machine
-```scp -i ~/.ssh/DevOpsStudents.pem -r app/ ubuntu@3.250.104.226:~/app/```
+```scp -i ~/.ssh/DevOpsStudents.pem -r app/ ubuntu@"Your IP address":~/app/```
 
 2. Enter machine
-```ssh -i ~/.ssh/DevOpsStudents.pem ubuntu@3.250.104.226```
+```ssh -i ~/.ssh/DevOpsStudents.pem ubuntu@"Your IP address"```
 
 3. Update and upgrade server software
 ```
