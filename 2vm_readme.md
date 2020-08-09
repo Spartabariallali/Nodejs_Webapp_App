@@ -105,4 +105,4 @@ npm install
 - access your webapp via your app AMI's public id
 - http://your_app_ami_public_ip/posts
 
-![posts](posts.jpeg)
+![posts](imagesmd/posts.jpeg)
