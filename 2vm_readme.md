@@ -53,3 +53,13 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
 
 
 ### Creating environment variable in App AMI
+
+- ssh into your app AMI
+- run the following command ensuring you include your db AMI's public ip address
+- command
+- go to your app directory
+- run the following command
+- npm install
+- run node app.js
+- access your webapp via your app AMI's public id 
+- http://your_app_ami_public_ip/posts
