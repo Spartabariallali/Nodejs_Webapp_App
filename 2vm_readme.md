@@ -32,10 +32,28 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
 
 
 - Verify that files have been properly synced by checking your db ami
-- If successful we should see the following: Image of files in db
-- run the commands ./provision.sh --> which executes the provision script
-- To see if mongodb is successfully installed run the following command: sudo systemctl status mongod
-- If the you can see the following image: image of successful of mongod
+```bash
+ls
+```
+- This should be the following output:
+
+![ls_output](imagesmd/lsoutput.jpeg)
+
+
+- run the command:
+```bash
+./provision.sh
+```
+- To see if mongodb is successfully installed run the following command:
+
+```bash
+sudo systemctl status mongod
+```
+
+- If the you can see the following:
+
+![mongod](imagesmd/mongod.jpeg)
+
 - db ami successfully provisioned
 
 ---
@@ -43,9 +61,19 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
 ### Assigning security group privileges  
 
 - Access your EC2 dashboard and locate your AMIs
+
+![ec2_dashboard](imagesmd/ec2.jpeg)
+
 - select your db AMI and click the security groups
+
+![sg](imagesmd/sg.jpeg)
+
 - select edit inbound rules
+
 - update inbound rules so that the app ami is able to access the db AMI's port 27017
+
+![ip](imagesmd/ip.jpeg)
+
 - save and exit
 
 
@@ -61,5 +89,5 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
 - run the following command
 - npm install
 - run node app.js
-- access your webapp via your app AMI's public id 
+- access your webapp via your app AMI's public id
 - http://your_app_ami_public_ip/posts
