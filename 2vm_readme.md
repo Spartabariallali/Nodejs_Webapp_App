@@ -7,6 +7,8 @@
 
 ### ***for information regarding creating a new AMI [click here](https://github.com/Spartabariallali/Nodejs_Webapp_App/blob/master/README.md)***
 
+---
+
 ### Setting up DB ami
 
 [Files to download are accessible here](https://github.com/Spartabariallali/Nodejs_Webapp_App/tree/master/environment/db)
