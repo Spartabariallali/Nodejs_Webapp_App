@@ -4,3 +4,5 @@
 1. Create a new db ami (from the EC2 dashboard)
 2. Provision the new db ami
 3. Add app ami to the security group of db ami's inbound rule - this allows a bi-lateral communication between the two machines
+
+### *** for information regarding creating a new AMI/ssh into the machine/syncing folders [click here](https://github.com/Spartabariallali/Nodejs_Webapp_App) ***
