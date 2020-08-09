@@ -83,11 +83,26 @@ sudo systemctl status mongod
 ### Creating environment variable in App AMI
 
 - ssh into your app AMI
+```bash
+ssh -i ~/.ssh/"YOUR_AWS_KEY" ubuntu@Your_ami_Ip_address.eu-west-1.compute.amazonaws.com
+```
+
 - run the following command ensuring you include your db AMI's public ip address
-- command
+```bash
+export DB_HOST=mongodb://your_app_ami_public_ip:27017/posts
+```
+
 - go to your app directory
+
 - run the following command
-- npm install
-- run node app.js
+```bash
+npm install
+```
+ run your web app via the following command
+ ```bash
+ run node app.js
+ ```
 - access your webapp via your app AMI's public id
 - http://your_app_ami_public_ip/posts
+
+![posts](posts.jpeg)
