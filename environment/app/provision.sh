@@ -1,37 +1,32 @@
 #!/bin/bash
 
-# Update the sources list
-sudo apt-get update -y
+# setting up
 
-# upgrade any packages available
-sudo apt-get upgrade -y
+  sudo apt-get update
 
-# install nginx
-sudo apt-get install nginx -y
+# install required modules
+  sudo apt-get install nginx -y
+  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  sudo apt-get install npm -y
+  sudo npm install ejs, mongoose, express
+# Configuring nginx proxy
+  IP=$(curl ifconfig.me)
 
-# configuring nginx proxy
-sudo unlink /etc/nginx/sites-enabled/default
-cd /etc/nginx/sites-available
-sudo touch reverse-proxy.conf
-sudo chmod 666 reverse-proxy.conf
-echo "server{
-  listen 80;
-  server_name development.local;
 
-  location / {
-      proxy_pass http://127.0.0.1:3000;
-  }
-}" >> reverse-proxy.conf
-sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
-sudo service nginx restart
+  sudo unlink /etc/nginx/sites-enabled/default
+# remove the old file and add our one
+  sudo rm /etc/nginx/sites-available/default
+  sudo ln -s /home/ubuntu/environment/app/nginx.default /etc/nginx/sites-available/default
+  sudo service nginx restart
 
-# install git
-sudo apt-get install git -y
 
-# install nodejs
-sudo apt-get install python-software-properties
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install nodejs -y
-
-# install pm2
-sudo npm install pm2 -g
+# Installs the npm dependencies
+  export DB_HOST=mongodb://ubuntu@34.247.69.231:27017/posts
+  sudo apt-get update
+  cd /home/ubuntu/app
+  sudo npm install
+  sudo npm install pm2 -g
+  npm install
+  # pm2 stop all
+  # pm2 start app.js -f
