@@ -62,11 +62,11 @@ sudo systemctl status mongod
 
 - Access your EC2 dashboard and locate your AMIs
 
-![ec2_dashboard](imagesmd/ec2.jpeg)
+![ec2_dashboard](imagesmd/ec2.png)
 
 - select your db AMI and click the security groups
 
-![sg](imagesmd/sg.jpeg)
+![sg](imagesmd/sg.png)
 
 - select edit inbound rules
 
