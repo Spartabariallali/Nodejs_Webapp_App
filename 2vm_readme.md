@@ -30,11 +30,11 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
  scp -i ~/.ssh/DevOpsStudents.pem -r ~/desktop/nginx_sample_code/nodejs-aws-deploy/environment/db ubuntu@ec2-54-76-170-201.eu-west-1.compute.amazonaws.com:/home/ubuntu/
 ```
 
+
 - Verify that files have been properly synced by checking your db ami
 - If successful we should see the following: Image of files in db
 - run the commands ./provision.sh --> which executes the provision script
 - To see if mongodb is successfully installed run the following command: sudo systemctl status mongod
-
 - If the you can see the following image: image of successful of mongod
 - db ami successfully provisioned
 
