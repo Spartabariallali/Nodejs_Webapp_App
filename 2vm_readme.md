@@ -4,6 +4,7 @@
 - Create a new db ami (from the EC2 dashboard)
 - Provision the new db ami
 - Add app ami to the security group of db ami's inbound rule - this allows for bi-lateral communication between the two machines
+- create environment variable in app AMI that establishes connection to mongodb
 
 ### ***for information regarding creating a new AMI [click here](https://github.com/Spartabariallali/Nodejs_Webapp_App/blob/master/README.md)***
 
@@ -28,3 +29,27 @@ scp -i ~/.ssh/"YourAws_key.pem" -r ~/Your_path_to_files ubuntu@Your_ami_Ip_addre
 ```bash
  scp -i ~/.ssh/DevOpsStudents.pem -r ~/desktop/nginx_sample_code/nodejs-aws-deploy/environment/db ubuntu@ec2-54-76-170-201.eu-west-1.compute.amazonaws.com:/home/ubuntu/
 ```
+
+- Verify that files have been properly synced by checking your db ami
+- If successful we should see the following: Image of files in db
+- run the commands ./provision.sh --> which executes the provision script
+- To see if mongodb is successfully installed run the following command: sudo systemctl status mongod
+
+- If the you can see the following image: image of successful of mongod
+- db ami successfully provisioned
+
+---
+
+### Assigning security group privileges  
+
+- Access your EC2 dashboard and locate your AMIs
+- select your db AMI and click the security groups
+- select edit inbound rules
+- update inbound rules so that the app ami is able to access the db AMI's port 27017
+- save and exit
+
+
+---
+
+
+### Creating environment variable in App AMI
