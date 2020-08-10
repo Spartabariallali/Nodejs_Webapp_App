@@ -100,7 +100,7 @@ npm install
 ```
  run your web app via the following command
  ```bash
- run node app.js
+ node app.js
  ```
 - access your webapp via your app AMI's public id
 - http://your_app_ami_public_ip/posts
