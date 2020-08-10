@@ -89,7 +89,7 @@ ssh -i ~/.ssh/"YOUR_AWS_KEY" ubuntu@Your_ami_Ip_address.eu-west-1.compute.amazon
 
 - run the following command ensuring you include your db AMI's public ip address
 ```bash
-export DB_HOST=mongodb://your_app_ami_public_ip:27017/posts
+export DB_HOST=mongodb://your_DB_ami_public_ip:27017/posts
 ```
 
 - go to your app directory
